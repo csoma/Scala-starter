@@ -5,9 +5,9 @@ An easy way to get started with Scala
 
 * On Mac there are no dependencies, the include batch file will download everything
 * On Windows you will need to download sbt manually (MSI or ZIP)
-* On Linux packages are available for RedHat, Ubuntu, Gentoo etc
+* On Linux sbt packages are available for RedHat, Ubuntu, Gentoo etc
 
-## Get Started
+## Geting Started
 
 ### Using git
 
@@ -37,6 +37,28 @@ Download and install sbt: http://www.scala-sbt.org/release/docs/Getting-Started/
 
 * REPL: sbt.bat console-quick
 * Running the app: sbt.bat run
+
+## Extending
+
+TBA
+
+## The files
+
+* **sbt** - a convenience script to avoid any manual install. Will check for dependencies (Java, Scala, libraries) and automatically download files. Not needed if SBT is already installed via hmoebrew, apt-get, MSI etc.
+* **src/main/scala/test/Main.scala** - a println for Hello World message
+* **project/Buid.scala** - sets some compiler flags and the project name
+
+
+## Command line
+
+* **sbt help** - SBT usage help
+* **sbt help tasks** - available task list: clean, compile, run, package, test etc.
+* **sbt console-quick** - starts the Scala REPL
+* **sbt console** - starts the Scala REPL with the current project in the classpath
+* **sbt run** - runs the active project (in this case prints "Hello World")
+* **sbt package** - creates a JAR file in the "target" folder (size: about 1.5K)
+* **sbt** - starts the SBT console
+
 
 ## More
 
