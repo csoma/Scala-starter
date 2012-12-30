@@ -12,7 +12,7 @@ An easy way to get started with Scala
 ### Using git
 
     git clone https://github.com/csoma/Scala-starter.git  
-    cd Scala-started
+    cd Scala-starter
 
 ### Alternative: download and unzip
 
@@ -38,9 +38,12 @@ Download and install sbt: http://www.scala-sbt.org/release/docs/Getting-Started/
 * REPL: sbt.bat console-quick
 * Running the app: sbt.bat run
 
-## Extending
+## Additional components
 
-TBA
+Remove the comment from "libraryDependencies" line in "Build.scala" file to enable additional components like Scalaz, Postgres driver, Apache HttpComponent etc
+
+SBT will download the specified version and add it to classpath.
+
 
 ## The files
 
@@ -65,5 +68,5 @@ TBA
 * About the SBT script: https://github.com/paulp/sbt-extras
 * Scalatra starter (REST API): https://github.com/scalatra/scalatra-sbt-prototype
 * Lift examples: https://github.com/lift/examples
-* Discussion about "why Scala?": http://news.ycombinator.com/item?id=4980982
+* Discussion about "why Scala?": http://news.ycombinator.com/item?id=4980982 Includes links to free Scala books, articles, videos etc.
 
