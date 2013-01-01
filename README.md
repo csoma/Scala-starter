@@ -79,6 +79,7 @@ SBT will download the specified library version and add it to classpath.
 
 * About the SBT bash script: https://github.com/paulp/sbt-extras
 * Scalatra starter (REST API): https://github.com/scalatra/scalatra-sbt-prototype
+* Lift starter (Web framework): https://github.com/lift/lift_25_sbt
 * Discussion about "why Scala?": http://news.ycombinator.com/item?id=4980982 <br>Includes links to free Scala books, articles, videos etc.
 * [Scala for the Impatient](http://www.amazon.com/Scala-Impatient-Cay-S-Horstmann/dp/0321774094) book and [PDF download](http://typesafe.com/resources/book/scala-for-the-impatient)
 * [An Introduction to Scala for Java Developers](http://www.infoq.com/articles/scala-for-java-devs) article
