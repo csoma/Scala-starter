@@ -19,15 +19,15 @@ object MyTestBuild extends Build {
 
       // The following line will enable additional components if you remove the //
       // ,libraryDependencies ++= scalazComponents ++ apacheHttpComponents ++ pdfBoxComponents ++ h2DBComponents ++ posgresDBComponents
-      
+
       // Uncomment to enable additional download sites. Required by some components.
-      // ,resolvers += ExtraResolvers
+      // ,resolvers ++= ExtraResolvers
     )
   )
 
 
   // Additional components ----------
-  
+
   // Scalaz https://github.com/scalaz/scalaz
   // From http://repo1.maven.org/maven2/org/scalaz
   // Use import scalaz._; import Scalaz._
@@ -78,7 +78,6 @@ object MyTestBuild extends Build {
 
   // Additional repos
   final val ExtraResolvers = Seq(
-
     // For geocoder jar at http://jgeocoder.sourceforge.net/
     "Drexel" at "https://www.cs.drexel.edu/~zl25/maven2/repo",
 
@@ -86,10 +85,7 @@ object MyTestBuild extends Build {
     "SonaScalaTools" at "http://oss.sonatype.org/content/groups/scala-tools/",
 
     // Snapshots: the bleeding edge
-    "snapshots-repo" at "http://www.scala-tools.org/repo-snapshots",
-    
-    // Typesafe
-    "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/"
+    "snapshots-repo" at "http://www.scala-tools.org/repo-snapshots"
   )
 
 }

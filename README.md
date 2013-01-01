@@ -31,17 +31,21 @@ Run the "Hello World" app
 
     ./sbt run
 
+For IDE see "Scala IDE" below
+
 ### Windows
 
 * [Download and install sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup)
 * Starting REPL: sbt.bat console-quick
 * Running the app: sbt.bat run
+* For IDE see "Scala IDE" below
 
 ## The files
 
 * **sbt** - convenience bash script to avoid any manual install. It will check for dependencies (Java, Scala, libraries) and automatically download required files. Not needed if SBT is already installed via homebrew, apt-get, MSI etc.
 * **src/main/scala/test/Main.scala** - a minimal "Hello World" program
-* **project/Buid.scala** - sets some compiler flags and the project name
+* **project/Buid.scala** - sets the project name, compiler flags, additional components like Scalaz and Postgres driver
+* **project/build.sbt** - adds the "eclipse" command (sbt plugin)
 
 ## Additional components
 
@@ -51,8 +55,14 @@ Remove the comment from "libraryDependencies" line in "Build.scala" file to enab
 
 SBT will download the specified library version and add it to classpath.
 
+## Scala IDE - Eclipse
 
-
+* Install Eclipse
+* Install Eclipse Scala IDE plugin: http://scala-ide.org/
+* From command line run "sbt eclipse"
+* Make sure Scala perspective is selected
+* From Eclipse use "Import Wizard" to import "General/Existing Projects into Workspace"
+* Run now should have "Scala Application"
 
 ## Command line
 
@@ -61,9 +71,9 @@ SBT will download the specified library version and add it to classpath.
 * **sbt console-quick** - starts the Scala REPL
 * **sbt console** - starts the Scala REPL with the current project in the classpath
 * **sbt run** - runs the active project (in this case just prints "Hello World")
+* **sbt eclipse** - generate Eclipse project definitions
 * **sbt package** - creates a JAR file in the "target" folder (size: about 1.5K)
 * **sbt** - starts the SBT console
-
 
 ## More
 
