@@ -1,13 +1,13 @@
 Scala-starter
 =============
 
-An easy way to get started with Scala
+An easy way to get started with Scala:
 
-* On Mac there are no dependencies, the include batch file will download everything
-* On Windows you will need to download sbt manually (MSI or ZIP)
-* On Linux sbt packages are available for RedHat, Ubuntu, Gentoo etc
+* On Mac there are no dependencies, the included batch file will download all the required files
+* On Windows you will need to [download and install sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html#manual-installation) manually (using MSI or ZIP)
+* On Linux [sbt packages are available](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html#installing-sbt) for RedHat, Ubuntu, Gentoo etc
 
-## Geting Started
+## Getting Started
 
 ### Using git
 
@@ -27,29 +27,31 @@ Start the REPL
     ./sbt console-quick
     (exit with Ctrl-D)
 
-Run the Hello World app
+Run the "Hello World" app
 
     ./sbt run
 
 ### Windows
 
-Download and install sbt: http://www.scala-sbt.org/release/docs/Getting-Started/Setup
-
-* REPL: sbt.bat console-quick
+* [Download and install sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup)
+* Starting REPL: sbt.bat console-quick
 * Running the app: sbt.bat run
+
+## The files
+
+* **sbt** - convenience bash script to avoid any manual install. It will check for dependencies (Java, Scala, libraries) and automatically download required files. Not needed if SBT is already installed via homebrew, apt-get, MSI etc.
+* **src/main/scala/test/Main.scala** - a minimal "Hello World" program
+* **project/Buid.scala** - sets some compiler flags and the project name
 
 ## Additional components
 
 Remove the comment from "libraryDependencies" line in "Build.scala" file to enable additional components like Scalaz, Postgres driver, Apache HttpComponent etc
 
-SBT will download the specified version and add it to classpath.
+    ,libraryDependencies ++= scalazComponents ++ apacheHttpComponents ++ posgresDBComponents
+
+SBT will download the specified library version and add it to classpath.
 
 
-## The files
-
-* **sbt** - a convenience script to avoid any manual install. Will check for dependencies (Java, Scala, libraries) and automatically download files. Not needed if SBT is already installed via hmoebrew, apt-get, MSI etc.
-* **src/main/scala/test/Main.scala** - a println for Hello World message
-* **project/Buid.scala** - sets some compiler flags and the project name
 
 
 ## Command line
@@ -58,15 +60,16 @@ SBT will download the specified version and add it to classpath.
 * **sbt help tasks** - available task list: clean, compile, run, package, test etc.
 * **sbt console-quick** - starts the Scala REPL
 * **sbt console** - starts the Scala REPL with the current project in the classpath
-* **sbt run** - runs the active project (in this case prints "Hello World")
+* **sbt run** - runs the active project (in this case just prints "Hello World")
 * **sbt package** - creates a JAR file in the "target" folder (size: about 1.5K)
 * **sbt** - starts the SBT console
 
 
 ## More
 
-* About the SBT script: https://github.com/paulp/sbt-extras
+* About the SBT bash script: https://github.com/paulp/sbt-extras
 * Scalatra starter (REST API): https://github.com/scalatra/scalatra-sbt-prototype
-* Lift examples: https://github.com/lift/examples
-* Discussion about "why Scala?": http://news.ycombinator.com/item?id=4980982 Includes links to free Scala books, articles, videos etc.
-
+* Discussion about "why Scala?": http://news.ycombinator.com/item?id=4980982 <br>Includes links to free Scala books, articles, videos etc.
+* [Scala for the Impatient](http://www.amazon.com/Scala-Impatient-Cay-S-Horstmann/dp/0321774094) book and [PDF download](http://typesafe.com/resources/book/scala-for-the-impatient)
+* [An Introduction to Scala for Java Developers](http://www.infoq.com/articles/scala-for-java-devs) article
+* Even more: [LiftWeb's Resources Wiki](https://www.assembla.com/spaces/liftweb/wiki/Resources)
