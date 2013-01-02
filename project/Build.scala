@@ -18,20 +18,22 @@ object MyTestBuild extends Build {
       description := "Main app"
 
       // The following line will enable additional components if you remove the //
-      // ,libraryDependencies ++= scalazComponents ++ apacheHttpComponents ++ pdfBoxComponents ++ h2DBComponents ++ posgresDBComponents
-
+      //,libraryDependencies ++= additionalComponents
+      
       // Uncomment to enable additional download sites. Required by some components.
-      // ,resolvers ++= ExtraResolvers
+      // TODO(vp): figure out how come it does not work
+      // ,resolvers += ExtraResolvers
     )
   )
 
 
   // Additional components ----------
-
+  
   // Scalaz https://github.com/scalaz/scalaz
   // From http://repo1.maven.org/maven2/org/scalaz
   // Use import scalaz._; import Scalaz._
-  lazy val scalaz = "org.scalaz" %% "scalaz-core" % "6.0.4" // cross CrossVersion.full
+  val scalazVersion = "7.0.0-M7"//"6.0.4"
+  lazy val scalaz = "org.scalaz" %% "scalaz-core" % scalazVersion // cross CrossVersion.full
   lazy val scalazComponents = Seq( scalaz )
 
 
@@ -60,6 +62,11 @@ object MyTestBuild extends Build {
   lazy val posgresDB = "postgresql" % "postgresql" % "9.1-901.jdbc4" // % "provided" 
   lazy val posgresDBComponents = Seq( posgresDB )
 
+  lazy val additionalComponents= scalazComponents ++ 
+                                 apacheHttpComponents ++ 
+                                 pdfBoxComponents ++ 
+                                 h2DBComponents ++ 
+                                 posgresDBComponents
 
   // Others
   // lazy val servlet_api  = "javax.servlet" % "servlet-api" % "2.5" % "provided" withSources
@@ -78,6 +85,7 @@ object MyTestBuild extends Build {
 
   // Additional repos
   final val ExtraResolvers = Seq(
+
     // For geocoder jar at http://jgeocoder.sourceforge.net/
     "Drexel" at "https://www.cs.drexel.edu/~zl25/maven2/repo",
 
@@ -85,7 +93,10 @@ object MyTestBuild extends Build {
     "SonaScalaTools" at "http://oss.sonatype.org/content/groups/scala-tools/",
 
     // Snapshots: the bleeding edge
-    "snapshots-repo" at "http://www.scala-tools.org/repo-snapshots"
+    "snapshots-repo" at "http://www.scala-tools.org/repo-snapshots",
+    
+    // Typesafe
+    "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/"
   )
 
 }
