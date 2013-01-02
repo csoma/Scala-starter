@@ -15,23 +15,29 @@ object MyTestBuild extends Build {
     id = "test",
     base = file("."),
     settings =  StandardSettings ++ Seq(
-      description := "Main app"
-
-      // The following line will enable additional components if you remove the //
-      // ,libraryDependencies ++= scalazComponents ++ apacheHttpComponents ++ pdfBoxComponents ++ h2DBComponents ++ posgresDBComponents
-
-      // Uncomment to enable additional download sites. Required by some components.
-      // ,resolvers ++= ExtraResolvers
+      description := "Main app",
+      libraryDependencies ++= additionalComponents, // See below
+      resolvers ++= ExtraResolvers
     )
   )
 
 
   // Additional components ----------
+ 
+  // To enable a component remove the // 
+  val additionalComponents =
+    scalazComponents ++
+    //apacheHttpComponents ++
+    //pdfBoxComponents ++
+    //h2DBComponents ++
+    //posgresDBComponents ++
+    Seq()
+
 
   // Scalaz https://github.com/scalaz/scalaz
   // From http://repo1.maven.org/maven2/org/scalaz
   // Use import scalaz._; import Scalaz._
-  lazy val scalaz = "org.scalaz" %% "scalaz-core" % "6.0.4" // cross CrossVersion.full
+  lazy val scalaz = "org.scalaz" %% "scalaz-core" % "7.0.0-M7"
   lazy val scalazComponents = Seq( scalaz )
 
 
@@ -76,16 +82,17 @@ object MyTestBuild extends Build {
   // lazy val scalacheck   = "org.scala-tools.testing" %% "scalacheck" % "1.8-SNAPSHOT" % "test" withSources
 
 
-  // Additional repos
+  // Additional repos, required by some components
   final val ExtraResolvers = Seq(
-    // For geocoder jar at http://jgeocoder.sourceforge.net/
-    "Drexel" at "https://www.cs.drexel.edu/~zl25/maven2/repo",
-
     // Scala-tools.org substitute
-    "SonaScalaTools" at "http://oss.sonatype.org/content/groups/scala-tools/",
+    "SonaScalaTools" at "http://oss.sonatype.org/content/groups/scala-tools/"
+
+    // For geocoder jar at http://jgeocoder.sourceforge.net/
+    //,"Drexel" at "https://www.cs.drexel.edu/~zl25/maven2/repo"
+
 
     // Snapshots: the bleeding edge
-    "snapshots-repo" at "http://www.scala-tools.org/repo-snapshots"
+    //,"snapshots-repo" at "http://www.scala-tools.org/repo-snapshots"
   )
 
 }
