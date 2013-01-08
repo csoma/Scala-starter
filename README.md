@@ -66,20 +66,35 @@ SBT will download the specified library version and add it to classpath.
 
 ## Command line
 
-* **sbt help** - SBT usage help
+### SBT - build tool
+
+* **sbt help** - SBT (build tool) usage help
 * **sbt help tasks** - available task list: clean, compile, run, package, test etc.
 * **sbt console-quick** - starts the Scala REPL
-* **sbt console** - starts the Scala REPL with the current project in the classpath
+* **sbt console** - starts the Scala REPL with the active project in the classpath
 * **sbt run** - runs the active project (in this case just prints "Hello World")
 * **sbt eclipse** - generate Eclipse project definitions
 * **sbt package** - creates a JAR file in the "target" folder (size: about 1.5K)
 * **sbt** - starts the SBT console
 
-## More
+### SBT script
 
-* About the SBT bash script: https://github.com/paulp/sbt-extras
+When the included sbt script is used:
+
+* **sbt -h** - SBT (convenience script) help
+* **sbt -210 command** - Use Scala 2.10
+* **sbt -29 command** - Use Scala 2.9
+* **sbt -jvm-debug 8090 command** - Turn on JVM debugging on port 8090
+
+## More starter projects
+
 * Scalatra starter (REST API): https://github.com/scalatra/scalatra-sbt-prototype
 * Lift starter (Web framework): https://github.com/lift/lift_25_sbt
+* giter8 template (sbt project scaffolding): https://github.com/ymasory/sbt.g8
+
+## Other Scala resources
+
+* About the SBT bash script: https://github.com/paulp/sbt-extras
 * Discussion about "why Scala?": http://news.ycombinator.com/item?id=4980982 <br>Includes links to free Scala books, articles, videos etc.
 * [Scala for the Impatient](http://www.amazon.com/Scala-Impatient-Cay-S-Horstmann/dp/0321774094) book and [PDF download](http://typesafe.com/resources/book/scala-for-the-impatient)
 * [An Introduction to Scala for Java Developers](http://www.infoq.com/articles/scala-for-java-devs) article
