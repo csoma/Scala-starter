@@ -3,7 +3,7 @@ Scala-starter
 
 An easy way to get started with Scala:
 
-* On Mac there are no dependencies, the included batch file will download all the required files
+* On Mac there are no dependencies, the included batch file (sbt) will download all the required files
 * On Windows you will need to [download and install sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html#manual-installation) manually (using MSI or ZIP)
 * On Linux [sbt packages are available](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html#installing-sbt) for RedHat, Ubuntu, Gentoo etc
 
@@ -25,19 +25,20 @@ An easy way to get started with Scala:
 Start the REPL
 
     ./sbt console-quick
+    println("Hello!")
     (exit with Ctrl-D)
 
-Run the "Hello World" app
+Run the included "Hello World" app
 
     ./sbt run
 
-For IDE see "Scala IDE" below
+For IDE install see "Scala IDE" below.
 
 ### Windows
 
 * [Download and install sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup)
-* Starting REPL: sbt.bat console-quick
-* Running the app: sbt.bat run
+* **Starting REPL**: sbt.bat console-quick
+* **Running the app**: sbt.bat run
 * For IDE see "Scala IDE" below
 
 ## The files
@@ -55,7 +56,9 @@ Remove the comment from "libraryDependencies" line in "Build.scala" file to enab
 
 SBT will download the specified library version and add it to classpath.
 
-## Scala IDE - Eclipse
+## Scala IDE
+
+### Eclipse
 
 * Install Eclipse
 * Install Eclipse Scala IDE plugin: http://scala-ide.org/
@@ -63,6 +66,14 @@ SBT will download the specified library version and add it to classpath.
 * Make sure Scala perspective is selected
 * From Eclipse use "Import Wizard" to import "General/Existing Projects into Workspace"
 * Run now should have "Scala Application"
+
+
+### IntelliJ IDEA
+
+See the following links:
+
+* http://www.jetbrains.com/idea/features/scala.html
+* http://blog.jetbrains.com/scala/
 
 ## Command line
 
