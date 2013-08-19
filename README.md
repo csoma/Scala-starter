@@ -82,8 +82,9 @@ SBT will download the specified library version and add it to classpath.
 
 See the following links:
 
-* http://www.jetbrains.com/idea/features/scala.html
-* http://blog.jetbrains.com/scala/
+* [IntelliJ in a few steps](https://news.ycombinator.com/item?id=6239003)
+* [IntelliJ download link](http://www.jetbrains.com/idea/features/scala.html)
+* [IntelliJ Scala plugin blog](http://blog.jetbrains.com/scala/)
 
 ## Command line
 
