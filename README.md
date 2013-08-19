@@ -7,7 +7,7 @@ An easy way to get started with Scala:
 * On Windows you will need to [download and install sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html#manual-installation) manually (using MSI or ZIP)
 * On Linux [sbt packages are available](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html#installing-sbt) for RedHat, Ubuntu, Gentoo etc
 
-## Getting Started
+## Download
 
 ### Using git
 
@@ -18,7 +18,7 @@ An easy way to get started with Scala:
 
     https://github.com/csoma/Scala-starter/archive/master.zip
 
-## Running
+## Run
 
 ### Mac
 
@@ -32,14 +32,24 @@ Run the included "Hello World" app
 
     ./sbt run
 
-For IDE install see "Scala IDE" below.
+**Alternative:** `brew install sbt`
+
+See also the "Scala IDE" below
+
+### Linux
+
+`apt-get install sbt`
+
+or 
+
+`yum install sbt`
 
 ### Windows
 
 * [Download and install sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup)
 * **Starting REPL**: sbt.bat console-quick
 * **Running the app**: sbt.bat run
-* For IDE see "Scala IDE" below
+* See also "Scala IDE" below
 
 ## The files
 
@@ -63,7 +73,7 @@ SBT will download the specified library version and add it to classpath.
 * Install Eclipse
 * Install Eclipse Scala IDE plugin: http://scala-ide.org/
 * From command line run "sbt eclipse"
-* Make sure Scala perspective is selected
+* Make sure the Scala perspective is selected
 * From Eclipse use "Import Wizard" to import "General/Existing Projects into Workspace"
 * Run now should have "Scala Application"
 
@@ -105,7 +115,8 @@ When the included sbt script is used:
 
 ## Other Scala resources
 
-* About the SBT bash script: https://github.com/paulp/sbt-extras
+* [Scala School](http://twitter.github.io/scala_school/) and related [discussion](https://news.ycombinator.com/item?id=6236967)
+* About the SBT bash script used in this project: https://github.com/paulp/sbt-extras
 * Discussion about "why Scala?": http://news.ycombinator.com/item?id=4980982 <br>Includes links to free Scala books, articles, videos etc.
 * [Scala for the Impatient](http://www.amazon.com/Scala-Impatient-Cay-S-Horstmann/dp/0321774094) book and [PDF download](http://typesafe.com/resources/book/scala-for-the-impatient)
 * [An Introduction to Scala for Java Developers](http://www.infoq.com/articles/scala-for-java-devs) article
