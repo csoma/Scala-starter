@@ -78,6 +78,7 @@ Any component supported by Maven can be added, see the "Component versions" sect
 
 * Install Eclipse
 * Install Eclipse Scala IDE plugin: http://scala-ide.org/
+* In project/build.sbt enable the Eclipse plugin
 * From command line run "sbt eclipse"
 * Make sure the Scala perspective is selected
 * From Eclipse use "Import Wizard" to import "General/Existing Projects into Workspace"
