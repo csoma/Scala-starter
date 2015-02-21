@@ -5,7 +5,15 @@ An easy way to get started with Scala.
 
 ## Overview
 
+This project contains the minimum requirements to get started with Scala.
+Both command line REPL and compile/run mode are supported.
 
+- For code changes see `src/main/scala/test/Main.scala`
+- To add libraries use `project/Build.scala`
+
+Several libraries are already in the Build file, from database drivers to PDF processing and Akka.
+
+Mac, Windows and Linux build instructions are provided below.
 
 ## Getting started
 
@@ -37,7 +45,7 @@ Alternative: [download as a ZIP](https://github.com/csoma/Scala-starter/archive/
 Start the command line [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
 
 ```
-./sbt console
+sbt console
 println("Hello!")
 
 Ctrl-D will exit
@@ -49,7 +57,8 @@ Or run the included "Hello World" app
 sbt run
 ```
 
-See also the "Scala IDE" below
+- [Maps and lists](https://gist.github.com/csoma/8115672)
+- See also the "Scala IDE" below
 
 ### Windows
 
@@ -106,9 +115,7 @@ See the following links:
 * From Eclipse use "Import Wizard" to import "General/Existing Projects into Workspace"
 * Run now should have "Scala Application"
 
-## Command line
-
-### SBT - build tool
+## SBT - build tool
 
 * **sbt help** - SBT (build tool) usage help
 * **sbt help tasks** - available task list: clean, compile, run, package, test etc.
@@ -119,16 +126,7 @@ See the following links:
 * **sbt package** - creates a JAR file in the "target" folder (size: about 1.5K)
 * **sbt** - starts the SBT console
 
-### SBT script
-
-When the included sbt script is used:
-
-* **sbt -h** - SBT (convenience script) help
-* **sbt -210 command** - Use Scala 2.10
-* **sbt -29 command** - Use Scala 2.9
-* **sbt -jvm-debug 8090 command** - Turn on JVM debugging on port 8090
-
-## More starter projects
+## Other starter projects
 
 * [Typesafe Activator](http://www.typesafe.com/get-started)
 * Scalatra starter (REST API): https://github.com/scalatra/scalatra-sbt-prototype
@@ -136,7 +134,7 @@ When the included sbt script is used:
 * giter8 template (sbt project scaffolding): https://github.com/ymasory/sbt.g8
 * [CodeBrew: Scala in the browser](https://codebrew.io/)
 
-## Other Scala resources
+## Scala resources
 
 * [Scala School](http://twitter.github.io/scala_school/) and related [discussion](https://news.ycombinator.com/item?id=6236967)
 * About the SBT bash script used in this project: https://github.com/paulp/sbt-extras
